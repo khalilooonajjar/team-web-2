@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1 #{"add order"}
+    form(method='POST', action='/articles/add')
+        #form-group
+            label the order:
+            input.form-control(name='title', type='text')
+        #form-group
+            label The name of the person who requested:
+            input.form-control(name='author', type='text')
+        #form-group
+            label Description of the order:
+            textarea.form-control(name='body')
+        br
+        input.btn.btn-primary(type='submit',value='Submit')
